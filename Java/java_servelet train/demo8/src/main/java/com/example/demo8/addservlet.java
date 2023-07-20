@@ -18,13 +18,16 @@ public class addservlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("Result is " + k);
 
-        request.setAttribute("k", k);
+        //todo::this is the method called url re-writting
+        response.sendRedirect("sq?k=" + k);
+
+        //!request.setAttribute("k", k);
 
         //creates the request dispatcher object to "sq" servlet
-        RequestDispatcher rd = request.getRequestDispatcher("sq");
+        //!RequestDispatcher rd = request.getRequestDispatcher("sq");
 
         //forwards the current request and response variables with the same request and response objects to the "sq" servlet
-        rd.forward(request, response);
+        //!rd.forward(request, response);
 
     }
 }

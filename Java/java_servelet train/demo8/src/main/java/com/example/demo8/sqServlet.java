@@ -9,7 +9,9 @@ import java.io.PrintWriter;
 public class sqServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        int k = (int) request.getAttribute("k");
+
+        //todo::getting the values comes from url re-writting
+        int k = Integer.parseInt(request.getParameter("k"));
         k = k * k;
         PrintWriter out = response.getWriter();
         out.println("sqaure : " + k);
