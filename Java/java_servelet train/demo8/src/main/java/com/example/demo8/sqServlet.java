@@ -1,9 +1,11 @@
 package com.example.demo8;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@WebServlet("/sq")
 public class sqServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -20,6 +22,8 @@ public class sqServlet extends HttpServlet {
 
         //todo::getting the values comes from url re-writting
         //int k = Integer.parseInt(request.getParameter("k"));
+
+
 
         k = k * k;
 

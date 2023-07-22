@@ -2,6 +2,7 @@ package com.example.demo8;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +11,8 @@ import java.io.IOException;
 import javax.servlet.http.Cookie;
 import java.io.PrintWriter;
 
+
+@WebServlet("/add")
 public class addservlet extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
