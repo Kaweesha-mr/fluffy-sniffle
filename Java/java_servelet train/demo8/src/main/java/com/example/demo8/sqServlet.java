@@ -16,6 +16,8 @@ public class sqServlet extends HttpServlet {
             }
         }
 
+        //cookies files are tested
+
         //todo::getting the values comes from url re-writting
         //int k = Integer.parseInt(request.getParameter("k"));
 
