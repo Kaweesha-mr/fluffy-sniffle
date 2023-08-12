@@ -5,19 +5,10 @@ import java.util.Scanner;
 public class exersice2 {
 
 	public static void main(String[] args) {
-		
-		String id,name,District;
-		
-		Scanner scn = new Scanner(System.in);
-		
-		System.out.print("DitNo :");
-		id = scn.next();
-		
-		System.out.print("Name :");
-		name = scn.next();
-		
-		System.out.print("District :");
-		District = scn.next();
+
+		String id = args[0];
+		String name = args[1];
+		Syring District = args[2];
 		
 		
 		System.out.println("DitNo :" + id);
