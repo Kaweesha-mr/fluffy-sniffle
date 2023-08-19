@@ -1,6 +1,7 @@
 package Version_A;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class LotteryNumbers {
 	
@@ -9,11 +10,12 @@ public class LotteryNumbers {
 	public LotteryNumbers() {
 		
 		Random rand = new Random();
-		
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = rand.nextInt(9)
+			arr[i] = rand.nextInt(9);
 		}
+		
 	}
+	
 	
 	public void compare(int user[]) {
 		
@@ -22,27 +24,37 @@ public class LotteryNumbers {
 		int[] matching = new int[5];
 		
 		for (int i = 0; i < arr.length; i++) {
-			
-			if(arr[i] == user[i]) {
-				count++;
-				matching[i] = user[i];
+			for (int j = 0; j < user.length; j++) {
+				
+				if(user[i] == arr[j]) {
+					count++;
+					matching[i] = user[i];
+					
 				}
+				
+			}
+			
+			
 		}
-		
-		System.out.println("User's Numbers :");
+			
+		System.out.print("User's Numbers :");
 		for (int i = 0; i < user.length; i++) {
 			
 			System.out.print(" "+user[i]);
 		}
-		System.out.println("Lottery Numbers :");
+		
+		System.out.println();
+		
+		
+		System.out.print("Lottery Numbers :");
 		for (int i = 0; i < arr.length; i++) {
 			
 			System.out.print(" "+arr[i]);
 		}
+		System.out.println();
+		System.out.println("Number of matching digits :"+ count);
 		
-		System.out.println("Number of matching digits :"+count);
-		
-		System.out.println("Matching digits : ");
+		System.out.print("Matching digits : ");
 		
 		for (int i = 0; i < matching.length; i++) {
 			
@@ -51,8 +63,24 @@ public class LotteryNumbers {
 			}
 			System.out.print(" " + matching[i]);
 		}
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
 		
+		LotteryNumbers ticket1 = new LotteryNumbers();
+		Scanner scn  = new Scanner(System.in);
+		int[] user = new int[5];
+		for (int j = 0; j < user.length; j++) {
+			
+			System.out.println("Enter your Ticket numbers");
+			user[j] = scn.nextInt();
+		}
 		
+		ticket1.compare(user);
 		
 		
 		
