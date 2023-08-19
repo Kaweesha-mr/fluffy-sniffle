@@ -52,4 +52,19 @@ public class RandNum {
 		
 	}
 	
+	public int average() {
+		
+		int sum =0;
+		
+		for (int i =0; i<5; i++){
+			for (int j =0; i<5; i++){
+				
+				sum = sum + rand[i][j];
+			}
+		}
+		return sum;
+		
+		
+	}
+	
 }
