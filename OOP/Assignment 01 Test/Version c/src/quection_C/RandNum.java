@@ -12,7 +12,8 @@ public class RandNum {
 	//constructor to assign values to 2d arrays
 	public RandNum() {
 		for (int i =0; i<5; i++){
-			for (int j =0; i<5; i++){
+			for (int j =0; j<5; j++){
+				
 				rand[i][j] = random.nextInt(1,100);
 				
 			}
@@ -24,7 +25,7 @@ public class RandNum {
 		int max = 0;
 		
 		for (int i =0; i<5; i++){
-			for (int j =0; i<5; i++){
+			for (int j =0; j<5; j++){
 				
 				if(max < rand[i][j]) {
 					max = rand[i][j];
@@ -41,7 +42,7 @@ public class RandNum {
 		int min = rand[0][0];
 		
 		for (int i =0; i<5; i++){
-			for (int j =0; i<5; i++){
+			for (int j =0; j<5; j++){
 				
 				if(min > rand[i][j]) {
 					min = rand[i][j];
@@ -60,7 +61,7 @@ public class RandNum {
 		int sum =0;
 		
 		for (int i =0; i<5; i++){
-			for (int j =0; i<5; i++){
+			for (int j =0; j<5; j++){
 				
 				sum = sum + rand[i][j];
 			}
@@ -71,7 +72,13 @@ public class RandNum {
 	
 	public void display() {
 		
-		System.out.println("Array :"+ rand);
+			for (int i =0; i<5; i++){
+				for (int j =0; j<5; j++){
+					System.out.print(rand[i][j]+" ");
+				}			
+					System.out.println();
+			}
+				
 		System.out.println("Maximum Number of Array :"+Maximum());
 		System.out.println("minimum Number of Array :"+minimum());
 		System.out.println("average value of Array :"+average());
