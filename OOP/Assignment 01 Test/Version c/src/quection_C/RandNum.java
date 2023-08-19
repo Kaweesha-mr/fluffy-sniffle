@@ -70,6 +70,7 @@ public class RandNum {
 	}
 	
 	
+	//print the values to terminal
 	public void display() {
 		
 			for (int i =0; i<5; i++){
