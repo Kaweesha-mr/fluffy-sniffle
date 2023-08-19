@@ -19,6 +19,7 @@ public class RandNum {
 		}
 	}
 
+	//maximun function
 	public int Maximum() {
 		int max = 0;
 		
@@ -35,6 +36,7 @@ public class RandNum {
 		return max;
 		
 	}
+	//minimum function
 	public int minimum() {
 		int min = rand[0][0];
 		
@@ -52,6 +54,7 @@ public class RandNum {
 		
 	}
 	
+	//avrage function
 	public int average() {
 		
 		int sum =0;
@@ -62,9 +65,16 @@ public class RandNum {
 				sum = sum + rand[i][j];
 			}
 		}
-		return sum;
+		return sum/25;
+	}
+	
+	
+	public void display() {
 		
-		
+		System.out.println("Array :"+ rand);
+		System.out.println("Maximum Number of Array :"+Maximum());
+		System.out.println("minimum Number of Array :"+minimum());
+		System.out.println("average value of Array :"+average());
 	}
 	
 }
