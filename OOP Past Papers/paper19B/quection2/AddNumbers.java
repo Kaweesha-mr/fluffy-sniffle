@@ -30,7 +30,6 @@ public class AddNumbers implements Runnable {
 					System.out.println( " => " +i+ "(+)" +i+ " = " + (i+i));
 					lock.notify();
 					lock.wait();
-
 			}	
 		}
 	}
