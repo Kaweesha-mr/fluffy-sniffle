@@ -5,6 +5,7 @@
 	<classpathentry kind="src" path="paper19B"/>
 	<classpathentry kind="src" path="paper19A"/>
 	<classpathentry kind="src" path="paper22CSIT"/>
+	<classpathentry kind="src" path="paper2023"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
