@@ -28,10 +28,5 @@ public class Pet implements PointerAllocator {
 
 	}
 
-	@Override
-	public int getPoints(int Points) {
-		
-		return points;
-	}
 
 }

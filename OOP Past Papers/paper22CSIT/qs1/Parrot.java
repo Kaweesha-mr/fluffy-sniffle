@@ -5,14 +5,14 @@ public class Parrot extends Pet {
 	String command;
 	
 	
-	public Parrot(String command) throws CaughtException {
+	public Parrot(String command)  {
 		
 		this.command = command;
 		
 	}
 	
 	
-public boolean isCaught(String command) throws CaughtException {
+public boolean isCaught(String command) {
 		
 		try {
 			
@@ -28,6 +28,7 @@ public boolean isCaught(String command) throws CaughtException {
 		
 		}
 		catch (CaughtException e) {
+			System.out.println("CaughtException :" + e.getMessage());
 			return true;
 			
 			
@@ -37,31 +38,37 @@ public boolean isCaught(String command) throws CaughtException {
 	}
 	
 	public void feed() {
+		points = points + 5;
 		System.out.println("Feeding the Parrot");
 		
 	}
 	
 	public void clean() {
-		
+		points = points + 10;
 		System.out.println("Cleaning the Parrot");
 		
 	}
 	
 	public void cudle() {
-		
+		points = points + 15;
 		System.out.println("Cuddling the Parrot");
 		
 	}
 	
-	public void GetTotalPoints() throws CaughtException {
-		
+	public void GetTotalPoints() {
 		
 		if(isCaught(command) == true) {
 			
-			setPoints(0);
+			points =0;
 			
 		}
+		else {
+			
+			System.out.println("Total point is "+ points);
 		
+		}
+		
+
 		
 	}
 }
